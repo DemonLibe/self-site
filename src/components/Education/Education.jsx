@@ -38,7 +38,7 @@ export default function Education() {
   ]
 
   return (
-    <section className="section education">
+    <section className="section education" id="education">
       <h2 className="section-title">Образование</h2>
       <div className="education-timeline">
         {education.map((edu, index) => (

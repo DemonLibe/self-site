@@ -24,14 +24,10 @@ export default function Header() {
               <li><a href="#experience" className="nav-link">Опыт</a></li>
               <li><a href="#skills" className="nav-link">Навыки</a></li>
               <li><a href="#education" className="nav-link">Образование</a></li>
-              <li><a href="#contact" className="nav-link">Контакты</a></li>
+
             </ul>
           </nav>
 
-          <div className="header-actions">
-            <a href="#contact" className="btn btn-primary">Связаться</a>
-            <a href="/resume.pdf" className="btn btn-secondary">Скачать CV</a>
-          </div>
         </div>
       </div>
     </header>

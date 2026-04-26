@@ -9,7 +9,7 @@ export default function Skills() {
   ]
 
   return (
-    <section className="section skills">
+    <section className="section skills" id="skills">
       <h2 className="section-title">Навыки</h2>
       <div className="skills-grid">
         {skills.map((skillGroup, index) => (

@@ -38,24 +38,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="about-stats">
-          <div className="stat-card">
-            <div className="stat-number">4+</div>
-            <div className="stat-label">Лет опыта</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">20+</div>
-            <div className="stat-label">Проектов</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">10+</div>
-            <div className="stat-label">Технологий</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">100%</div>
-            <div className="stat-label">Довольных заказчиков</div>
-          </div>
-        </div>
+
       </div>
 
       <div className="about-philosophy">

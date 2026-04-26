@@ -50,7 +50,7 @@ export default function Contact() {
   ]
 
   return (
-    <section className="section contact">
+    <section className="section contact" id="contact">
       <h2 className="section-title">Контакты</h2>
       
       <div className="contact-info">
@@ -63,22 +63,6 @@ export default function Contact() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="contact-form-section">
-        <h3 className="form-title">Связаться со мной</h3>
-        <form className="contact-form">
-          <div className="form-group">
-            <input type="text" placeholder="Ваше имя" className="form-input" />
-          </div>
-          <div className="form-group">
-            <input type="email" placeholder="Ваш email" className="form-input" />
-          </div>
-          <div className="form-group">
-            <textarea placeholder="Сообщение" className="form-textarea" rows="4"></textarea>
-          </div>
-          <button type="submit" className="btn btn-primary form-submit">Отправить сообщение</button>
-        </form>
       </div>
 
       <div className="languages-section">
@@ -110,19 +94,6 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="availability-section">
-        <h3 className="availability-title">Доступность</h3>
-        <div className="availability-status">
-          <div className="status-indicator active"></div>
-          <span className="status-text">Открыт для новых возможностей</span>
-        </div>
-        <p className="availability-note">
-          Готов к удаленной работе и релокации. Рассматриваю интересные предложения в сфере веб-разработки.
-        </p>
-        <a href="/resume.pdf" className="btn btn-secondary download-cv">
-          📥 Скачать резюме (PDF)
-        </a>
-      </div>
     </section>
   )
 }
