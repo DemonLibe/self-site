@@ -7,13 +7,13 @@ export default function Header() {
         <div className="header-content">
           <div className="header-profile">
             <img
-              src="https://via.placeholder.com/150"
+              src="https://w7.pngwing.com/pngs/802/825/png-transparent-redbubble-polite-cat-meme-funny-cat-meme-thumbnail.png"
               alt="Profile"
               className="profile-photo"
             />
             <div className="profile-info">
-              <h1 className="header-title">Иван Иванов</h1>
-              <p className="header-subtitle">Senior Frontend Developer</p>
+              <h1 className="header-title">Артур Аслямов</h1>
+              <p className="header-subtitle">Frontend Developer</p>
               <p className="header-tagline">Создаю современные и эффективные веб-приложения</p>
             </div>
           </div>
