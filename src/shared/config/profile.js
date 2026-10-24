@@ -1,6 +1,20 @@
 export const profile = {
   name: 'Артур Аслямов',
+  firstName: 'Артур',
+  lastName: 'Аслямов',
+  initials: 'АА',
   title: 'Frontend Developer',
   tagline: 'Создаю современные и эффективные веб-приложения',
+  roles: ['Frontend Developer', 'React-разработчик', 'UI-инженер', 'Любитель чистого кода'],
+  location: 'Москва, Россия',
+  available: true,
   photo: '',
+  email: 'artur2000as62@gmail.com',
+  github: 'https://github.com/DemonLibe',
+  linkedin: 'https://linkedin.com/in/arthur-aslyamov-38727b253',
+  stats: [
+    { value: '4+', label: 'года в разработке' },
+    { value: '15+', label: 'проектов' },
+    { value: '3', label: 'компании' },
+  ],
 }

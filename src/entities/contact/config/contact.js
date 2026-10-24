@@ -1,33 +1,36 @@
 export const contactInfo = [
   {
-    icon: '📧',
+    icon: 'mail',
     label: 'Email',
     value: 'artur2000as62@gmail.com',
     link: 'mailto:artur2000as62@gmail.com',
   },
   {
-    icon: '📱',
+    icon: 'phone',
     label: 'Телефон',
     value: '+7 (999) 123-45-67',
     link: 'tel:+79991234567',
   },
   {
-    icon: '📍',
+    icon: 'pin',
     label: 'Локация',
     value: 'Москва, Россия',
     link: 'https://maps.google.com/?q=Москва',
+    external: true,
   },
   {
-    icon: '💼',
+    icon: 'linkedin',
     label: 'LinkedIn',
     value: 'linkedin.com/in/arthur-aslyamov-38727b253',
     link: 'https://linkedin.com/in/arthur-aslyamov-38727b253',
+    external: true,
   },
   {
-    icon: '🐙',
+    icon: 'github',
     label: 'GitHub',
     value: 'github.com/DemonLibe',
     link: 'https://github.com/DemonLibe',
+    external: true,
   },
 ]
 

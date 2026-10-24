@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: 'Frontend Developer',
     company: 'Tech Solutions Inc.',
-    period: '2021 - Present',
+    period: '2021 — н.в.',
     description: 'Разработка и поддержка клиентских веб-приложений на React. Оптимизация производительности и улучшение пользовательского опыта.',
     achievements: [
       'Сократил время загрузки приложения на 40%',
@@ -13,7 +13,7 @@ export const experiences = [
   {
     title: 'Full Stack Developer',
     company: 'Digital Agency',
-    period: '2019 - 2021',
+    period: '2019 — 2021',
     description: 'Разработка полного цикла веб-приложений с использованием React и Node.js.',
     achievements: [
       'Разработал 5+ коммерческих проектов',
@@ -24,7 +24,7 @@ export const experiences = [
   {
     title: 'Junior Web Developer',
     company: 'StartUp Studio',
-    period: '2018 - 2019',
+    period: '2018 — 2019',
     description: 'Создание лендингов и корпоративных сайтов. Участие в командных проектах.',
     achievements: [
       'Создал 10+ адаптивных сайтов',
