@@ -79,7 +79,7 @@
 .hero-anim {
   opacity: 0;
   transform: translateY(24px);
-  animation: hero-in 1s var(--ease-out) forwards;
+  animation: hero-in 1s var(--ease) forwards;
   animation-delay: var(--d, 0ms);
 }
 
@@ -90,14 +90,13 @@
   }
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
+.chip.hero-badge {
   gap: 10px;
+  height: auto;
   padding: 7px 14px 7px 12px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--line-strong);
   border-radius: 999px;
-  background: var(--surface);
+  background: var(--glass);
   backdrop-filter: blur(10px);
   font-size: 13px;
   color: var(--text-muted);
@@ -198,7 +197,7 @@
   gap: 44px;
   margin-top: 56px;
   padding-top: 32px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .hero-stat__value {
@@ -245,9 +244,11 @@
   }
 }
 
-.hero-avatar__inner {
+.avatar.hero-avatar__inner {
   position: absolute;
   inset: 4px;
+  width: auto;
+  height: auto;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -257,13 +258,11 @@
     var(--bg-soft);
 }
 
-.hero-avatar__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-avatar__initials {
+.avatar__fallback.hero-avatar__initials {
+  display: block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
   font-size: clamp(64px, 9vw, 104px);
   font-weight: 800;
   letter-spacing: -0.05em;
@@ -273,18 +272,20 @@
   color: transparent;
 }
 
-.hero-chip {
+.chip.hero-chip {
   position: absolute;
+  height: auto;
+  color: var(--text);
   padding: 7px 14px;
   border-radius: 999px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--line-strong);
   background: color-mix(in srgb, var(--bg) 70%, transparent);
   backdrop-filter: blur(12px);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--elev);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -321,8 +322,10 @@
   }
 }
 
-.hero-code {
+.card.hero-code {
   width: min(360px, 100%);
+  gap: 0;
+  padding: 0;
   font-size: 13px;
 }
 
@@ -330,12 +333,13 @@
   transform: none;
 }
 
-.hero-code__bar {
+.card__header.hero-code__bar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 7px;
   padding: 12px 16px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--line);
 }
 
 .hero-code__bar span {
@@ -460,7 +464,7 @@
     font-size: 16px;
   }
 
-  .hero-actions .btn {
+  .hero-actions .button {
     flex: 1 1 100%;
   }
 

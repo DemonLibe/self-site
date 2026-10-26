@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Button, Tooltip, buttonVariants } from '@heroui/react'
 import { profile } from '../../../shared/config/profile'
 import { useActiveSection, useScrollProgress, useTheme } from '../../../shared/lib'
 import { Icon } from '../../../shared/ui/Icon'
@@ -57,27 +58,34 @@ export function Header() {
         </nav>
 
         <div className="header-actions">
-          <button
-            type="button"
-            className="icon-btn"
-            onClick={toggle}
-            aria-label={theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'}
-            title="Сменить тему"
-          >
-            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
-          </button>
-          <a href="#contact" className="header-cta" onClick={closeMenu}>
+          <Tooltip delay={300}>
+            <Button
+              isIconOnly
+              variant="outline"
+              className="icon-btn"
+              onPress={toggle}
+              aria-label={theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'}
+            >
+              <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
+            </Button>
+            <Tooltip.Content showArrow>
+              <Tooltip.Arrow />
+              {theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'}
+            </Tooltip.Content>
+          </Tooltip>
+          <a href="#contact" className={`${buttonVariants({ size: 'md' })} header-cta`} onClick={closeMenu}>
             Связаться
           </a>
-          <button
-            type="button"
+          <Button
+            isIconOnly
+            variant="outline"
             className="icon-btn header-burger"
-            onClick={() => setMenuOpen((v) => !v)}
+            onPress={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
             aria-expanded={menuOpen}
           >
             <Icon name={menuOpen ? 'close' : 'menu'} size={20} />
-          </button>
+          </Button>
         </div>
       </div>
       <div className="header-progress" style={{ transform: `scaleX(${progress})` }} />

@@ -11,7 +11,8 @@
   gap: 20px;
 }
 
-.education-item {
+.card.education-item {
+  gap: 4px;
   padding: 28px;
 }
 
@@ -33,23 +34,25 @@
   box-shadow: 0 10px 24px -10px rgba(var(--accent-rgb), 0.8);
 }
 
-.education-period {
+.chip.education-period {
+  height: auto;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-muted);
   padding: 5px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--line);
   border-radius: 999px;
+  background: transparent;
 }
 
-.education-degree {
+.card__title.education-degree {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
-.education-description {
+.card__description.education-description {
   margin-top: 4px;
   font-size: 16px;
   font-weight: 500;
@@ -57,7 +60,7 @@
 }
 
 .education-institution {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 15px;
   line-height: 1.6;
   color: var(--text-muted);
@@ -69,26 +72,44 @@
   padding: 4px 12px;
   font-size: 13px;
   border-radius: 999px;
-  background: var(--surface-strong);
+  background: var(--glass-strong);
 }
 
-.education-side {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.education-tabs {
+  gap: 20px;
 }
 
-.education-subtitle {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 18px;
-  font-size: 18px;
-  font-weight: 600;
+.tabs__list-container:has(.education-tabs__list) {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 999px;
 }
 
-.education-subtitle .icon {
-  color: var(--accent);
+.tabs__tab.education-tabs__tab {
+  gap: 8px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.tabs__tab.education-tabs__tab[data-selected='true'] {
+  color: var(--text);
+}
+
+.education-tabs__tab .tabs__indicator {
+  border-radius: 999px;
+  background: var(--glass-strong);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.education-tabs__panel {
+  animation: panel-in 0.5s var(--ease);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
 }
 
 .certificates-list {
@@ -98,27 +119,25 @@
   gap: 12px;
 }
 
-.certificate-card {
-  display: flex;
+.card.certificate-card {
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 18px 22px;
-  border-radius: var(--radius-md);
+  border-radius: var(--r-md);
 }
 
-.certificate-card:hover {
+.card.certificate-card:hover {
   transform: translateX(4px);
 }
 
-.certificate-name {
+.card__title.certificate-name {
   font-size: 16px;
   font-weight: 600;
 }
 
-.certificate-issuer,
-.certificate-id {
-  display: block;
+.card__description.certificate-issuer {
   font-size: 14px;
   color: var(--text-muted);
 }
@@ -131,7 +150,7 @@
 
 .courses-list {
   list-style: none;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .course-item {
@@ -140,9 +159,9 @@
   gap: 16px;
   padding: 14px 4px;
   font-size: 15px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--line);
   transition:
-    padding-left 0.3s var(--ease-out),
+    padding-left 0.3s var(--ease),
     color 0.3s ease;
 }
 
@@ -168,7 +187,7 @@
     padding: 22px;
   }
 
-  .education-degree {
+  .card__title.education-degree {
     font-size: 22px;
   }
 }

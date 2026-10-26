@@ -58,8 +58,8 @@
   gap: 16px;
 }
 
-.highlight-item {
-  display: flex;
+.card.highlight-item {
+  flex-direction: row;
   align-items: flex-start;
   gap: 18px;
   padding: 24px;
@@ -75,20 +75,21 @@
   color: var(--accent);
   background: rgba(var(--accent-rgb), 0.12);
   border: 1px solid rgba(var(--accent-rgb), 0.25);
-  transition: transform 0.4s var(--ease-out);
+  transition: transform 0.4s var(--ease);
 }
 
 .highlight-item:hover .highlight-icon {
   transform: rotate(-8deg) scale(1.08);
 }
 
-.highlight-title {
+.card__title.highlight-title {
+  line-height: 1.4;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
-.highlight-description {
+.card__description.highlight-description {
   font-size: 15px;
   line-height: 1.6;
   color: var(--text-muted);
@@ -102,7 +103,7 @@
 }
 
 @media (max-width: 576px) {
-  .highlight-item {
+  .card.highlight-item {
     padding: 20px;
   }
 }

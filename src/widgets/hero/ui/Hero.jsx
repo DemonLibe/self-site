@@ -1,3 +1,4 @@
+import { Avatar, Card, Chip, buttonVariants } from '@heroui/react'
 import { profile } from '../../../shared/config/profile'
 import { useTypewriter } from '../../../shared/lib'
 import { Icon } from '../../../shared/ui/Icon'
@@ -19,10 +20,10 @@ export function Hero() {
       <div className="container hero-inner">
         <div className="hero-text">
           {profile.available && (
-            <span className="hero-badge hero-anim" style={{ '--d': '0ms' }}>
+            <Chip variant="secondary" className="hero-badge hero-anim" style={{ '--d': '0ms' }}>
               <span className="hero-badge__dot" />
-              Открыт к новым предложениям
-            </span>
+              <Chip.Label>Открыт к новым предложениям</Chip.Label>
+            </Chip>
           )}
 
           <h1 className="hero-title hero-anim" style={{ '--d': '100ms' }}>
@@ -44,11 +45,16 @@ export function Hero() {
           </p>
 
           <div className="hero-actions hero-anim" style={{ '--d': '400ms' }}>
-            <a href="#contact" className="btn btn-primary">
+            <a href="#contact" className={`${buttonVariants({ size: 'lg' })} btn-xl btn-gradient`}>
               Связаться со мной
-              <Icon name="arrowRight" size={18} />
+              <Icon name="arrowRight" size={18} className="icon-arrow" />
             </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" className="btn btn-ghost">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              className={`${buttonVariants({ variant: 'outline', size: 'lg' })} btn-xl btn-glass`}
+            >
               <Icon name="github" size={18} />
               GitHub
             </a>
@@ -67,27 +73,24 @@ export function Hero() {
         <div className="hero-visual hero-anim" style={{ '--d': '250ms' }}>
           <div className="hero-avatar">
             <div className="hero-avatar__ring" />
-            <div className="hero-avatar__inner">
-              {profile.photo ? (
-                <img src={profile.photo} alt={profile.name} className="hero-avatar__img" />
-              ) : (
-                <span className="hero-avatar__initials">{profile.initials}</span>
-              )}
-            </div>
+            <Avatar className="hero-avatar__inner">
+              {profile.photo && <Avatar.Image src={profile.photo} alt={profile.name} />}
+              <Avatar.Fallback className="hero-avatar__initials">{profile.initials}</Avatar.Fallback>
+            </Avatar>
             {ORBIT_TAGS.map((tag, i) => (
-              <span key={tag} className={`hero-chip hero-chip--${i + 1}`}>
+              <Chip key={tag} size="lg" className={`hero-chip hero-chip--${i + 1}`}>
                 {tag}
-              </span>
+              </Chip>
             ))}
           </div>
 
-          <div className="hero-code card" aria-hidden="true">
-            <div className="hero-code__bar">
+          <Card className="hero-code glass-card" aria-hidden="true">
+            <Card.Header className="hero-code__bar">
               <span />
               <span />
               <span />
               <em>developer.js</em>
-            </div>
+            </Card.Header>
             <pre>
               <code>
                 <span className="tk-k">const</span> <span className="tk-v">artur</span> = {'{'}
@@ -98,7 +101,7 @@ export function Hero() {
                 {'\n'}{'}'}
               </code>
             </pre>
-          </div>
+          </Card>
         </div>
       </div>
 

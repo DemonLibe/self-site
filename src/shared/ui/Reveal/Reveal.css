@@ -4,7 +4,7 @@
 }
 
 .reveal--visible {
-  animation: reveal-in 0.8s var(--ease-out) var(--reveal-delay, 0ms) backwards;
+  animation: reveal-in 0.8s var(--ease) var(--reveal-delay, 0ms) backwards;
 }
 
 @keyframes reveal-in {

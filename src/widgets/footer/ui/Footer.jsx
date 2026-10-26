@@ -1,3 +1,4 @@
+import { buttonVariants } from '@heroui/react'
 import { profile } from '../../../shared/config/profile'
 import { Icon } from '../../../shared/ui/Icon'
 import './Footer.css'
@@ -27,7 +28,7 @@ export function Footer() {
               <li key={s.label}>
                 <a
                   href={s.href}
-                  className="icon-btn"
+                  className={`${buttonVariants({ variant: 'outline', isIconOnly: true })} icon-btn`}
                   aria-label={s.label}
                   title={s.label}
                   {...(s.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}

@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
   padding: 36px 0;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .footer-top .icon {
-  transition: transform 0.3s var(--ease-out);
+  transition: transform 0.3s var(--ease);
 }
 
 .footer-top:hover {

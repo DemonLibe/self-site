@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
-// Tracks the pointer over any `.card` so CSS can draw a soft glow under the cursor.
-export function useSpotlight(selector = '.card') {
+// Tracks the pointer over any `.glass-card` so CSS can draw a soft glow under the cursor.
+export function useSpotlight(selector = '.glass-card') {
   useEffect(() => {
     const onMove = (e) => {
       const card = e.target.closest?.(selector)

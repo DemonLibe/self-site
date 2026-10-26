@@ -1,3 +1,4 @@
+import { Card } from '@heroui/react'
 import { SectionHeader } from '../../../shared/ui/SectionHeader'
 import { Reveal } from '../../../shared/ui/Reveal'
 import { Icon } from '../../../shared/ui/Icon'
@@ -51,14 +52,18 @@ export function About() {
 
           <div className="about-highlights">
             {highlights.map((item, i) => (
-              <Reveal key={item.title} delay={i * 100} className="highlight-item card">
-                <span className="highlight-icon">
-                  <Icon name={item.icon} size={22} />
-                </span>
-                <div className="highlight-content">
-                  <h3 className="highlight-title">{item.title}</h3>
-                  <p className="highlight-description">{item.description}</p>
-                </div>
+              <Reveal key={item.title} delay={i * 100}>
+                <Card className="highlight-item glass-card">
+                  <span className="highlight-icon">
+                    <Icon name={item.icon} size={22} />
+                  </span>
+                  <Card.Header className="highlight-content">
+                    <Card.Title className="highlight-title">{item.title}</Card.Title>
+                    <Card.Description className="highlight-description">
+                      {item.description}
+                    </Card.Description>
+                  </Card.Header>
+                </Card>
               </Reveal>
             ))}
           </div>
