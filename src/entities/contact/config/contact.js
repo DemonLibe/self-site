@@ -14,8 +14,8 @@ export const contactInfo = [
   {
     icon: 'pin',
     label: 'Локация',
-    value: 'Москва, Россия',
-    link: 'https://maps.google.com/?q=Москва',
+    value: 'Альметьевск, Россия',
+    link: 'https://maps.google.com/?q=Альметьевск',
     external: true,
   },
   {
@@ -43,7 +43,7 @@ export const languages = [
 export const interests = [
   'Открытый исходный код',
   'Искусственный интеллект',
-  'Anime',
+  'Разработка игр',
   'Путешествия',
-  'Чтение',
+  'Литература',
 ]
